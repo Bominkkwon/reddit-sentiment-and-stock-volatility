@@ -1,1 +1,3 @@
-# reddit-sentiment-and-stock-volatility
+# Sentiment Analysis of "$AMC" and Technical Indicator Correlation
+
+
