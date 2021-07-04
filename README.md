@@ -6,6 +6,7 @@
 * [Technologies](#technologies)
 * [Motivation](#motivation)
 * [Overview](#overview)
+* [Methodology](#methodology)
 * [Results](#results)
 * [Summary](#summary)
 
@@ -25,3 +26,5 @@ A large audience of retail traders organized in social media platforms such as [
 ## Overview 
 
 Sentiment analysis is the process of detecting positive or negative sentiment in text. It’s often used by businesses to detect sentiment in social data, gauge brand reputation, and understand customers. There are two type of user-generated content available on the web: facts and opinions. Facts are statements about topics and in the current scenario, which are collectible from the Internet using search engines that index documents based on topic keywords. Opinions are user specific statement exhibiting positive or negative sentiments about a certain topic. Generally opinions are hard to categorize using keywords. Various text analysis and machine learning techniques are used to mine opinions from a document. We will explore a logistic regression approach to determine if there was a correlation between sentiment and stock price for this project using Reddit's "cashtag" symbol $ and stock symbol ("AMC") to obtain Reddit's stock sentiment and its historial stock price data.
+
+## Methodology
