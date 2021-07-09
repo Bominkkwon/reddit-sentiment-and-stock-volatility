@@ -30,7 +30,7 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 ## Methodology
 
 ### 1.Stock Price Dataset
-
+* [AMC Entertainment Holdings, Inc. Class A Common Stock ($AMC) Historical Data](https://www.nasdaq.com/market-activity/stocks/amc/historical)
 ### 2.Reddit Dataset:
 * [Reddit API](https://www.reddit.com/dev/api/)
 * [Scrape data from Reddit using the Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#script-application)
