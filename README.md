@@ -19,7 +19,7 @@ Sentiment Analysis of "$AMC" and Technical Indicator Correlation
 
 ## Motivation
 ![](img/bloomberg_redditarticle_img.jpg)
-A large audience of retail traders organized in social media platforms such as [reddit](https://www.reddit.com/) have the ability to influence stock prices. By analyzing the sentiment of these traders through their social media posts, it may be possible to anticipate stock market moves. AMC Entertainment Holdings, Inc. ($AMC)is one of the most mentioned stocks in the subreddit [r/WallStreetBets](https://www.reddit.com/r/wallstreetbets/) and trying to identify a fundamental narrative to justify the ascent of 'meme stocks' like AMC Entertainment is difficult. 
+A large audience of retail traders organized in social media platforms such as [reddit](https://www.reddit.com/) have the ability to influence stock prices. By analyzing the sentiment of these traders through their social media posts, it may be possible to anticipate stock market moves. AMC Entertainment Holdings, Inc. ($AMC)is one of the most mentioned stocks in the subreddit [r/WallStreetBets](https://www.reddit.com/r/wallstreetbets/), which is a community of stock market enthusiasts with 1.3 million members and trying to identify a fundamental narrative to justify the ascent of 'meme stocks' like AMC Entertainment is difficult. 
 
 [please note: this project is for educational or entertainment purposes only and is not intended in any way as financial advice.]
 
@@ -34,3 +34,8 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 ### 2.Reddit Dataset:
 * [Reddit API](https://www.reddit.com/dev/api/)
 * [Scrape data from Reddit using the Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#script-application)
+### 3. Required Libraries
+* PRAW: Python wrapper for Reddit API [(see docs)](https://praw.readthedocs.io/en/latest/)
+(see the following article on how to set up PRAW https://towardsdatascience.com/scraping-reddit-data-1c0af3040768)
+* VADER : Valence Aware Dictionary for Sentiment Reasoning is a model used for text sentiment analysis that is sensitive to both polarity (positive/negative) and intensity (strength) of emotion
+* 
