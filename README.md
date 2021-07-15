@@ -38,7 +38,7 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
   <summary>How to set up a Python API Wrapper to obtain data</summary>
   
     ## Prerequisites
-    1. To access Reddit's API, you will need to create a [Reddit account] (https://www.reddit.com/register/)
+    1. To access Reddit's API, you will need to create a [Reddit account](https://www.reddit.com/register/)
     2. Client ID
     3. Client Secret
     4. User Agent
