@@ -57,8 +57,9 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 
 
 ### 3. Required Libraries
-* PRAW: [Scrape data from Reddit using the Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#script-application)
+* [PRAW](https://praw.readthedocs.io/en/stable/getting_started/installation.html): Reddit API Wrapper(PRAW)
 
 
-* VADER : Valence Aware Dictionary for Sentiment Reasoning is a model used for text sentiment analysis that is sensitive to both polarity (positive/negative) and intensity (strength) of emotion
-* 
+* [VADER](https://pypi.org/project/vaderSentiment/#data): Valence Aware Dictionary for Sentiment Reasoning is a model used for text sentiment analysis that is sensitive to both polarity (positive/negative) and intensity (strength) of emotion
+
+* [NLTK](https://www.nltk.org/install.html): Natural Language Toolkit
