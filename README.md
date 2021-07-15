@@ -33,28 +33,32 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 * [AMC Entertainment Holdings, Inc. Class A Common Stock ($AMC) Historical Data](https://www.nasdaq.com/market-activity/stocks/amc/historical)
 ### 2. Reddit Dataset:
 * [Reddit API](https://www.reddit.com/dev/api/)
+* [Scrape data from Reddit using the Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#script-application)
   <details>
   <summary>How to set up a Python API Wrapper to obtain data</summary>
   
     ## Prerequisites
-    1. To access Reddit's API, you will need to create a [Reddit account (https://www.reddit.com/register/)
+    1. To access Reddit's API, you will need to create a [Reddit account] (https://www.reddit.com/register/)
     2. Client ID
     3. Client Secret
     4. User Agent
 
     ## Getting Access
+  ![](img/create_application.png)
     1. Create an application via [App Preferences](https://www.reddit.com/prefs/apps), then select the "Are you a developer? Create another app..." at the bottom of the page.
-    2. Fill out the required details: your API's **Name**, make sure to select the **'script'** option and the redirect URL with **http://localhost:8080** or **“http://www.example.com/unused/redirect/uri”** --- and click create app.
-    3. Client ID, Client Secret, and User Agent values will be shown after creating your app.
+    2. Fill out the required details: your API's **Name**, make sure to select the **'script'** option and the redirect URL with **http://localhost:8080** or **“http://www.example.com/unused/redirect/uri”** --- and click **'create app'**.
+  
+    ## Authentication Information
+  ![](img/developed_app.png)
+  iii. **Client ID('personal use script')**, **Client Secret('secret')**, and **User Agent('name')** values will be shown after creating your application-- these authentication information will be needed to create the ```praw.reddit```.
   
   
   </details>
 
-* [Scrape data from Reddit using the Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#script-application)
 
 ### 3. Required Libraries
-* PRAW: Python wrapper for Reddit API [(see docs)](https://praw.readthedocs.io/en/latest/)
-(see the following article on how to set up PRAW https://towardsdatascience.com/scraping-reddit-data-1c0af3040768)
+* PRAW: [Scrape data from Reddit using the Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#script-application)
+
 
 * VADER : Valence Aware Dictionary for Sentiment Reasoning is a model used for text sentiment analysis that is sensitive to both polarity (positive/negative) and intensity (strength) of emotion
 * 
