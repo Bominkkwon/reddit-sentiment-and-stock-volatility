@@ -25,7 +25,7 @@ A large audience of retail traders organized in social media platforms such as [
 
 ## Overview 
 
-Sentiment analysis is the process of detecting positive or negative sentiment in text. It’s often used by businesses to detect sentiment in social data, gauge brand reputation, and understand customers. There are two type of user-generated content available on the web: facts and opinions. Facts are statements about topics and in the current scenario, which are collectible from the Internet using search engines that index documents based on topic keywords. Opinions are user specific statement exhibiting positive or negative sentiments about a certain topic. Generally opinions are hard to categorize using keywords. Various text analysis and machine learning techniques are used to mine opinions from a document. We will explore a logistic regression approach to determine if there was a correlation between sentiment and stock price for this project using Reddit's "cashtag" symbol $ and stock symbol ("AMC") to obtain Reddit's stock sentiment and its historial stock price data.
+Sentiment analysis is the process of detecting positive or negative sentiment in text. It is often used by businesses to detect sentiment in social data, gauge brand reputation, and understand customers. There are two type of user-generated content available on the web: facts and opinions. Facts are statements about topics and in the current scenario, which are collectible from the Internet using search engines that index documents based on topic keywords. Opinions are user specific statement exhibiting positive or negative sentiments about a certain topic and --generally, opinions are hard to categorize using keywords, so various text analysis and machine learning techniques are used to mine opinions from a document/post. In this project, we will be analysing the sentiment of comments from Subreddit(r/WallStreetBets) posts by calculate each tokenized word's polarity scores using the VADER (Valence Aware Dictionary for Sentiment Reasoning) model and analyze the correlation between stock market movements and sentiments in Reddit.
 
 ## Methodology
 
@@ -33,9 +33,28 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 * [AMC Entertainment Holdings, Inc. Class A Common Stock ($AMC) Historical Data](https://www.nasdaq.com/market-activity/stocks/amc/historical)
 ### 2. Reddit Dataset:
 * [Reddit API](https://www.reddit.com/dev/api/)
+  <details>
+  <summary>How to set up a Python API Wrapper to obtain data</summary>
+  
+    ## Prerequisites
+    1. To access Reddit's API, you will need to create a [Reddit account (https://www.reddit.com/register/)
+    2. Client ID
+    3. Client Secret
+    4. User Agent
+
+    ## Getting Access
+    1. Create an application via [App Preferences](https://www.reddit.com/prefs/apps), then select the "Are you a developer? Create another app..." at the bottom of the page.
+    2. Fill out the required details: your API's **Name**, make sure to select the **'script'** option and the redirect URL with **http://localhost:8080** or **“http://www.example.com/unused/redirect/uri”** --- and click create app.
+    3. Client ID, Client Secret, and User Agent values will be shown after creating your app.
+  
+  
+  </details>
+
 * [Scrape data from Reddit using the Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#script-application)
+
 ### 3. Required Libraries
 * PRAW: Python wrapper for Reddit API [(see docs)](https://praw.readthedocs.io/en/latest/)
 (see the following article on how to set up PRAW https://towardsdatascience.com/scraping-reddit-data-1c0af3040768)
+
 * VADER : Valence Aware Dictionary for Sentiment Reasoning is a model used for text sentiment analysis that is sensitive to both polarity (positive/negative) and intensity (strength) of emotion
 * 
