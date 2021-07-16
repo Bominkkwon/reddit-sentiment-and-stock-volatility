@@ -33,7 +33,6 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 * [AMC Entertainment Holdings, Inc. Class A Common Stock ($AMC) Historical Data](https://www.nasdaq.com/market-activity/stocks/amc/historical)
 ### 2. Reddit Dataset:
 * [Reddit API](https://www.reddit.com/dev/api/)
-* [Scrape data from Reddit using the Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#script-application)
   <details>
   <summary>How to set up a Python API Wrapper to obtain data</summary>
   
@@ -65,10 +64,38 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
               user_agent= PRAWConfig.REDDIT_USER_AGENT)
    ```
   
-  
+    
   </details>
+  
+ * [Scrape data from Reddit using the Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#script-application)
+ 
+    <details>
+    <summary>How to extract the comments from a Reddit subreddit post</summary>
 
+    ## Create a submission object 
+    ```python
 
+    subreddit = reddit.subreddit('WallStreetBets')
+    ticker = "AMC" 
+
+    def get_date(date):
+    return dt.datetime.fromtimestamp(date)
+
+    for submission in subreddit.hot(limit=20):
+      for submission in subreddit.search(ticker, limit=130):
+        if submission.domain != "self.wallstreetbets":
+            continue
+        print(submission.title)
+        print('Submission ID =', submission.id, '\n')
+        print('date =', get_date(submission.created_utc) , '\n')
+    ```
+    In order to extract the comments from a subreddit post, you need to create a submission object and here we are looking for specific posts: the top 20 "hot" posts in r/WallStreetBets, that was written by a Reddit user, and also mentions $AMC. 
+
+    </details>
+    
+ 
+    
+  
 ### 3. Required Libraries
 * [PRAW](https://praw.readthedocs.io/en/stable/getting_started/installation.html): Reddit API Wrapper(PRAW)
 
