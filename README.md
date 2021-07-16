@@ -52,6 +52,19 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
   ![](img/developed_app.png)
   iii. **Client ID('personal use script')**, **Client Secret('secret')**, and **User Agent('name')** values will be shown after creating your application-- these authentication information will be needed to create the ```praw.reddit```.
   
+    ## Create a reddit connection with reddit API information
+
+
+  ```python
+  
+  # Create praw.Reddit object with with reddit OAuth creds
+  # Reddit application creds created at https://www.reddit.com/prefs/apps
+  reddit = praw.Reddit(
+              client_id= PRAWConfig.REDDIT_CLIENT_ID,
+              client_secret= PRAWConfig.REDDIT_CLIENT_SECRET,
+              user_agent= PRAWConfig.REDDIT_USER_AGENT)
+   ```
+  
   
   </details>
 
