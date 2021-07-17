@@ -72,25 +72,26 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
     <details>
     <summary>How to extract the comments from a Reddit subreddit post</summary>
 
-    ## Create a submission object 
-    ```python
+      ## Create a submission object 
+      ![](img/subreddit_hot.png)
+        (Submission ID is an assigned "ID" for a specific post on Reddit)
+  
+      In order to extract the comments from a subreddit post, you'll need to **create a submission objec**t and in this script-- we are looking for specific posts: the **top 20 "hot" popular posts in r/WallStreetBets, that was written by a Reddit user, and also mentions $AMC.** Subreddits can be filtered in many different ways; you can also choose to display your desired number of posts by changing ```(limit=20)``` that are ["new", "hot", "top", etc.](https://praw.readthedocs.io/en/latest/code_overview/models/subreddit.html)
+  
+      ## Define a submission object with submission ID and store all comments scraped from my submission object in a list 
 
-    subreddit = reddit.subreddit('WallStreetBets')
-    ticker = "AMC" 
+      ![](img/submission_id_okq6jr.png)
+      I chose the highlighted post by defining our submission object with Submission ID= 'ok16jr':
+      ```python
+      # define a submission object
+      Post1 = reddit.submission(id='ok16jr')
+      ```
+      because this post has the largest number of comments that mentioned $AMC. After defining a submission obeject, you will be able to scrape all of the comments from your desired post. 
+  
+      ![](img/post1_list.png)
+      
 
-    def get_date(date):
-    return dt.datetime.fromtimestamp(date)
-
-    for submission in subreddit.hot(limit=20):
-      for submission in subreddit.search(ticker, limit=130):
-        if submission.domain != "self.wallstreetbets":
-            continue
-        print(submission.title)
-        print('Submission ID =', submission.id, '\n')
-        print('date =', get_date(submission.created_utc) , '\n')
-    ```
-    In order to extract the comments from a subreddit post, you need to create a submission object and here we are looking for specific posts: the top 20 "hot" posts in r/WallStreetBets, that was written by a Reddit user, and also mentions $AMC. 
-
+  
     </details>
     
  
