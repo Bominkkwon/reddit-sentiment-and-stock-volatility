@@ -126,6 +126,8 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
       
       ```
       
+      These processes dramatically reduced the number of words:
+      ![](img/pre_post.png)
   
   
   
