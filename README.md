@@ -76,19 +76,18 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
       ![](img/subreddit_hot.png)
         (Submission ID is an assigned "ID" for a specific post on Reddit)
   
-      In order to extract the comments from a subreddit post, you'll need to **create a submission objec**t and in this script-- we are looking for specific posts: the **top 20 "hot" popular posts in r/WallStreetBets, that was written by a Reddit user, and also mentions $AMC.** Subreddits can be filtered in many different ways; you can also choose to display your desired number of posts by changing ```(limit=20)``` that are ["new", "hot", "top", etc.](https://praw.readthedocs.io/en/latest/code_overview/models/subreddit.html)
+      In order to extract the comments from a subreddit post, you'll need to **create a submission objec**t and in this script-- we are looking for specific posts: the **top 30 "hot" popular posts in r/WallStreetBets, that was written by a Reddit user, and also mentions $AMC.** Subreddits can be filtered in many different ways; you can also choose to display your desired number of posts by changing ```(limit=30)``` that are ["new", "hot", "top", etc.](https://praw.readthedocs.io/en/latest/code_overview/models/subreddit.html)
   
-      ## Define a submission object with submission ID and store all comments scraped from my submission object in a list 
+      ## Define a submission object with submission ID 
+      ![](img/post1.png)
+      (you can also find the Submission ID directly from its url) 
+  
+      ## store all comments scraped from my submission object in a list 
 
-      ![](img/submission_id_okq6jr.png)
-      I chose the highlighted post by defining our submission object with Submission ID= 'ok16jr':
-      ```python
-      # define a submission object
-      Post1 = reddit.submission(id='ok16jr')
-      ```
-      because this post has the largest number of comments that mentioned $AMC. After defining a submission obeject, you will be able to scrape all of the comments from your desired post. 
+      ![](img/amc_comments_all.png)
+      After defining a submission object, you will be able to scrape all of the comments from your desired post. 
   
-      ![](img/post1_list.png)
+      
       
 
   
