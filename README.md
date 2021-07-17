@@ -85,7 +85,49 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
       ## store all comments scraped from my submission object in a list 
 
       ![](img/amc_comments_all.png)
-      After defining a submission object, you will be able to scrape all of the comments from your desired post. 
+      After defining a submission object, you will be able to scrape all of the comments from your desired post. You can also specify your "keyword" and use other filters to limit the effects of corrupt or poor data sets on the overall outcome of a machine learning model.
+  
+      ## Preprocess the comments
+      After converting to a string object, you can either:
+  
+      **Option 1.** remove emojis by:
+  
+      ```python
+      comments_without_emojis = emoji.get_emoji.regexp().sub(u'',string_raw) 
+      ```
+      This will simply **remove** all emojis from the comments and you will be able to perform sentiment analysis solely based on user's words. 
+      
+      **Option 2.** convert emojis to text:
+      ![](img/emoji_to_text.png)
+      As emojis play a significant role in expressing the sentiments expecially on social media, you can replace them with the expression they represent in "plain English." (For this project, I used this method and updated specific emojis/continuous emojis(its text form) since r/Wallstreetsbets has their own way of using emojis/"slang dictionary"--e.g. "diamond hands" often referenced using :gem::open_hands:/:gem::raised_back_of_hand: are how members express their belief that their position is valuable and worth holding on to for maximum profit. [(see more common WBS words/emojis)](https://www.reuters.com/article/us-retail-trading-slang-factbox/factbox-stonks-in-washington-deciphering-reddits-wallstreetbets-lingo-idUSKBN2AI0JF) 
+  
+      **Option 3.** tokenize emojis:
+      ![](img/tokenize_emoji.png)
+      You can also tokenize emojis-- and this will split the contiguous entities when emojis are involved. This method will require you to update emoji sentiment score as well since certain emojis are considered to be positive by the oriiginal lexicon, but it is negative in WSB's dictionary, and vice versa.e.g. :fire: is considered to be negative by the original lexcon, but positive in WSB's dictionary.
+  
+      ## Tokenize, clean, convert into lowercase, and remove stopwords
+      ``` python
+      # tokenize and clean strings
+      tokenizer = RegexpTokenizer('\w+|\$[\d\.]+|http\S+')
+      tokenized_string = tokenizer.tokenize(emoji_converted_text)
+      ```
+  
+      ```python
+      # convert Tokens into lowercase letters
+      lc_tokenized_string = [word.lower() for word in tokenized_string]
+      ```
+  
+      ```python
+      # remove stopwords *** stopwords are words that do not add much information to a sentence
+      spacy_nlp = en_core_web_sm.load()
+      all_sw = spacy_nlp.Defaults.stop_words
+      text = lc_tokenized_string
+      tokens_wosm = [word for word in text if not word in all_sw]
+      
+      ```
+      
+  
+  
   
       
       
