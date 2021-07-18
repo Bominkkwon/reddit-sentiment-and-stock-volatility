@@ -8,7 +8,20 @@ wsbfinancial_jargon = {
     'btfd': 3,
     'dd': 3,
     'pump': 3,
+    'rocket': 3,
+    'gem_stone': 3,
+    'smiling_face_with_open_mouth_': 3,
+    'gem_stoneopen_hands': 3,
+    'lambo': 3,
+    'face_with_tears_of_joy': 3,
+    'gem_stoneraised_back_of_hand': 3,
+    'rocketfull_moon': 3,
+    'locked': 3,
+    'loaded': 3,
     'rebound': 1,
+    'massive': 1,
+    'hawkish': 2,
+    'citadel': 2,
     'bounce': 2,
     'hold': 2,
     'holding': 2,
@@ -27,6 +40,7 @@ wsbfinancial_jargon = {
     'shorts': -3,
     'sell': -3,
     'paper': -3,
-    'dump': -3
+    'dump': -3,
+    'crying_face': -3
     
 }
