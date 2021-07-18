@@ -1,4 +1,4 @@
-# Sentiment Analysis of "$AMC" and Technical Indicator Correlation
+reddit-sentiment-and-stock-volatility
 
 
 ## Table of Contents
@@ -12,7 +12,7 @@
 
 
 ## Project title
-Sentiment Analysis of "$AMC" and Technical Indicator Correlation
+Reddit Sentiment Analysis of "$AMC" and Technical Indicator Correlation
 
 ## Technologies
 [Python](https://www.python.org/downloads/ "Download Python") 3.7.9.
