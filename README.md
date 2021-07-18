@@ -1,4 +1,4 @@
-reddit-sentiment-and-stock-volatility
+# reddit-sentiment-and-stock-volatility
 
 
 ## Table of Contents
