@@ -156,6 +156,7 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 
 ## Initializing VADER sentiment Analyser
 I used the VADER (Valence Aware Dictionary for Sentiment Reasoning) model to analyze the sentiment of r/Wallstreetbets submission with my [customized lexicon](https://github.com/Bominkkwon/reddit-sentiment-and-stock-volatility/blob/main/sentiment/custom_lexicon.py)-- To initialize vader sentiment analyser:
+
 ![](img/vader_ini.png)
 
 ## Updating/customizing Lexicon list
@@ -209,7 +210,10 @@ wsbfinancial_jargon = {
 }
 ```
 ## Understanding each word's polarity score
+
 VADER sentimental analysis relies on a dictionary that maps lexical features to emotion intensities known as sentiment scores. The sentiment score of a text can be obtained by summing up the intensity of each word in the text. To find a single unidemnsional measure of sentiment for a given word, I measured each word's polarity score:
+
 ![](img/polarity_score.png)
+
   * Polarity classification
-    This process will only focus on one thing: if the text expresses a positive, negative or neutral "opinion"
+    - This process will only focus on one thing: if the text expresses a positive, negative or neutral "opinion"
