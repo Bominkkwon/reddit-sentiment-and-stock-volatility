@@ -6,6 +6,7 @@
 * [Technologies](#technologies)
 * [Motivation](#motivation)
 * [Overview](#overview)
+* [Required Libraries](#required-library)
 * [Methodology](#methodology)
 * [Results](#results)
 * [Summary](#summary)
@@ -26,6 +27,17 @@ A large audience of retail traders organized in social media platforms such as [
 ## Overview 
 
 Sentiment analysis is the process of detecting positive or negative sentiment in text. It is often used by businesses to detect sentiment in social data, gauge brand reputation, and understand customers. There are two type of user-generated content available on the web: facts and opinions. Facts are statements about topics and in the current scenario, which are collectible from the Internet using search engines that index documents based on topic keywords. Opinions are user specific statement exhibiting positive or negative sentiments about a certain topic and --generally, opinions are hard to categorize using keywords, so various text analysis and machine learning techniques are used to mine opinions from a document/post. In this project, we will be analysing the sentiment of comments from Subreddit(r/WallStreetBets) posts by calculate each tokenized word's polarity scores using the VADER (Valence Aware Dictionary for Sentiment Reasoning) model and analyze the correlation between stock market movements and sentiments in Reddit.
+
+## Required Libraries
+
+* [PRAW](https://praw.readthedocs.io/en/stable/getting_started/installation.html): Reddit API Wrapper(PRAW)
+
+* [VADER](https://pypi.org/project/vaderSentiment/#data): Valence Aware Dictionary for Sentiment Reasoning is a model used for text sentiment analysis that is sensitive to both polarity (positive/negative) and intensity (strength) of emotion
+
+* [NLTK](https://www.nltk.org/install.html): Natural Language Toolkit
+
+* [yfinance](https://pypi.org/project/yfinance/): Yahoo! Finance market data downloader
+
 
 ## Methodology
 
@@ -140,12 +152,59 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
  
     
   
-### 3. Required Libraries
-* [PRAW](https://praw.readthedocs.io/en/stable/getting_started/installation.html): Reddit API Wrapper(PRAW)
+### 3. Reddit Sentiment Corpus
+I used the VADER (Valence Aware Dictionary for Sentiment Reasoning) model to analyze the sentiment of r/Wallstreetbets submission with my [customized lexicon](https://github.com/Bominkkwon/reddit-sentiment-and-stock-volatility/blob/main/sentiment/custom_lexicon.py)-- To initialize vader sentiment analyser:
+![](img/vader_ini.png)
 
+I have added some WSB "financial terms" into my custimized lexicon list and it is important to pick up on their inside jokes and "slangs" -- e.g. 
+``` python
+wsbfinancial_jargon = {
+    'moon': 3,
+    'buy': 3,
+    'buying': 3,
+    'long': 3,
+    'tendies': 3,
+    'diamond': 3,
+    'btfd': 3,
+    'dd': 3,
+    'pump': 3,
+    'rocket': 3,
+    'gem_stone': 3,
+    'smiling_face_with_open_mouth_': 3,
+    'gem_stoneopen_hands': 3,
+    'lambo': 3,
+    'face_with_tears_of_joy': 3,
+    'gem_stoneraised_back_of_hand': 3,
+    'rocketfull_moon': 3,
+    'locked': 3,
+    'loaded': 3,
+    'rebound': 1,
+    'massive': 1,
+    'hawkish': 2,
+    'citadel': 2,
+    'bounce': 2,
+    'hold': 2,
+    'holding': 2,
+    'call': 3,
+    'calls': 3,
+    'squeeze': 3,
+    'gain': 2,
+    'gains': 2,
+    'liquidate': -3,
+    'liquidated': -3,
+    'put': -3,
+    'puts': -3,
+    'bagholder': -3,
+    'bagholders': -3,
+    'short': -3,
+    'shorts': -3,
+    'sell': -3,
+    'paper': -3,
+    'dump': -3,
+    'crying_face': -3
+    
+}
+```
 
-* [VADER](https://pypi.org/project/vaderSentiment/#data): Valence Aware Dictionary for Sentiment Reasoning is a model used for text sentiment analysis that is sensitive to both polarity (positive/negative) and intensity (strength) of emotion
-
-* [NLTK](https://www.nltk.org/install.html): Natural Language Toolkit
-
-* [yfinance](https://pypi.org/project/yfinance/): Yahoo! Finance market data downloader
+To find a single unidemnsional measure of sentiment for a given word, I measured each word's polarity score:
+![](img/polarity_score.png)
