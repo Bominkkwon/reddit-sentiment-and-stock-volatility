@@ -39,6 +39,8 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 
 * [yfinance](https://pypi.org/project/yfinance/): Yahoo! Finance market data downloader
 
+* [Matplotlib](https://matplotlib.org/): comprehensive library for creating static, animated, and interactive visualizations in Python
+
 
 ## Methodology
 
