@@ -1,8 +1,8 @@
-# reddit-sentiment-and-stock-volatility
+# Reddit Sentiment Analysis of "$AMC" and Technical Indicator Correlation
 
 
 ## Table of Contents
-* [Project title](#project-title)
+* [Project Title](#project-title)
 * [Technologies](#technologies)
 * [Motivation](#motivation)
 * [Overview](#overview)
@@ -11,7 +11,7 @@
 * [Summary](#summary)
 
 
-## Project title
+## Project Title
 Reddit Sentiment Analysis of "$AMC" and Technical Indicator Correlation
 
 ## Technologies
