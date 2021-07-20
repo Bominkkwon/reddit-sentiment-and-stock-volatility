@@ -156,7 +156,11 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 * [Technical Indicator Analysis: Bollinger Bands®](https://github.com/Bominkkwon/reddit-sentiment-and-stock-volatility/blob/main/technical_indicator/technical_indicator__bollinger_band.ipynb)
     <details>
     <summary>The Basics of Bollinger Bands</summary>
-    A Bollinger Band® is a tool used in technical analysis. It is defined by a series of lines that are plotted two standard deviations—both positively and negatively—away from the simple moving average (SMA) of the price of a security. Bollinger Bands® identify a stock's high and low volatility points. While it can be a real challenge to forecast future prices and price cycles, volatility changes and cycles are relatively easy to identify. This is because equities alternate between periods of low volatility and high volatility—much like the **calm before the storm!** and the inevitable activity afterward. [read more about BB](https://www.schwab.com/resource-center/insights/content/bollinger-bandsr-what-they-are-and-how-to-use-them)
+    A Bollinger Band® is a tool used in technical analysis. It is defined by a series of lines that are plotted two standard deviations—both positively and negatively—away from the simple moving average (SMA) of the price of a security. Bollinger Bands® identify a stock's high and low volatility points. While it can be a real challenge to forecast future prices and price cycles, volatility changes and cycles are relatively easy to identify. This is because equities alternate between periods of low volatility and high volatility—much like the **calm before the storm!** and the inevitable activity afterward.
+  
+  [read more about BB](https://www.schwab.com/resource-center/insights/content/bollinger-bandsr-what-they-are-and-how-to-use-them)
+  
+    </details>
   
 ### 4. Reddit Sentiment Corpus
 
