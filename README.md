@@ -30,7 +30,7 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 ## Methodology
 
 ### 1. Stock Price Dataset
-* [AMC Entertainment Holdings, Inc. Class A Common Stock ($AMC) Historical Data](https://www.nasdaq.com/market-activity/stocks/amc/historical)
+* [yfinance](https://pypi.org/project/yfinance/)
 ### 2. Reddit Dataset:
 * [Reddit API](https://www.reddit.com/dev/api/)
   <details>
@@ -147,3 +147,5 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 * [VADER](https://pypi.org/project/vaderSentiment/#data): Valence Aware Dictionary for Sentiment Reasoning is a model used for text sentiment analysis that is sensitive to both polarity (positive/negative) and intensity (strength) of emotion
 
 * [NLTK](https://www.nltk.org/install.html): Natural Language Toolkit
+
+* [yfinance](https://pypi.org/project/yfinance/): Yahoo! Finance market data downloader
