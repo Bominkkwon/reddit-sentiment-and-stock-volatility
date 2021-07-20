@@ -283,6 +283,8 @@ The width of the band can be an indicator of its volatility-- i.e. narrower band
   
 ## Summary
   A visual comparison of Sentiment over time vs. BB buy indicator needs more indepth analysis to assess if and how predictive sentiment is on price. 
+  Link to google slides presentation: https://docs.google.com/presentation/d/1ZWNmC5B2555MLmZNFfxAD8R54t1Lw-grf5Ad72_pFV0/edit#slide=id.ge502095f44_0_47
+  Link dashboard: https://docs.google.com/presentation/d/1wv-GNLssNsgwQxpzeCkczrvSTHCaUOcEbLsCJbVlwVs/edit#slide=id.p
   
 ## Future Work
   Such data from these social media platforms are easily manipulated by bots and sock puppet accounts; even the "hot", "new", "top" posts from this Subreddit can be manipulated by them-- it is bigger than just those orders or the price of a security getting manipulated, it could also manipulate those actual user's decision making process. It can be extremely hard to detect where bots are at work without advanced analysis tools. As detection tools get stronger, developers will look for ways around detection and as bots get more advanced, platforms will accelerate research and development to counterattack.
