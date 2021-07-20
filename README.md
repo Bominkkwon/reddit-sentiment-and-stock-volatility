@@ -150,9 +150,11 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
     </details>
     
  
-    
+### 3. Technical Indicator
+
+* [Technical Indicator Analysis: Bollinger Bands®](https://github.com/Bominkkwon/reddit-sentiment-and-stock-volatility/blob/main/technical_indicator/technical_indicator__bollinger_band.ipynb)
   
-### 3. Reddit Sentiment Corpus
+### 4. Reddit Sentiment Corpus
 
 ## Initializing VADER sentiment Analyser
 I used the VADER (Valence Aware Dictionary for Sentiment Reasoning) model to analyze the sentiment of r/Wallstreetbets submission with my [customized lexicon](https://github.com/Bominkkwon/reddit-sentiment-and-stock-volatility/blob/main/sentiment/custom_lexicon.py)-- To initialize vader sentiment analyser:
