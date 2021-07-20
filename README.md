@@ -266,4 +266,7 @@ I generated visualizations(e.g. bar chart) to have a better understanding of our
   
 The chart on the left shows the 'historical' stock data and the bar chart on the right is the visualization of sentiments of comments we generated for the post we picked, Submission ID = oldyp9. This particular post was generated on 07/15/2021 after the market was closed and reddit users commented on this post from when the post was created, 07/15/2021, to 07/16/2021 and our analysis shows that the comments on $AMC from this particular post are **neutral-positive skewed**. $AMC closed @$36.00 on 07/15/2021 and opened @37.83 on 07/16/2021 and closed @34.96	on 07/16/2021.
   
-![](
+![](img/AMC_bb_20.png)
+The width of the band can be an indicator of its volatility-- i.e. narrower bands indicate less volatility while wider ones indicate higher volatility. Our sentiment analysis shows that from the comments: 2839 words are considered 'neutral' (80.9%), 404 words are considered 'positive' (11.5%) and 263 words are considered 'negative'(7.5%); even though the comments are neutral-positive skewed, the percentage difference between the 'positive' values and the 'negative' values were not significant(about 4%) and it could indicate users had mixed feelings about the stock and may have resulted in higher volatility (this is without taking any other economic indicators or influences into consideration, merely "analyzing" this based on the subreddit sentiment of the collected comments.) During this specific period, the bands are wider, showing higher volatility and its volume moved from 199584500 to 126277200.
+  
+  
