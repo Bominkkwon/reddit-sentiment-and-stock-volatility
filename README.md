@@ -156,11 +156,6 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
   
 ### 4. Reddit Sentiment Corpus
 
-## Initializing VADER sentiment Analyser
-I used the VADER (Valence Aware Dictionary for Sentiment Reasoning) model to analyze the sentiment of r/Wallstreetbets submission with my [customized lexicon](https://github.com/Bominkkwon/reddit-sentiment-and-stock-volatility/blob/main/sentiment/custom_lexicon.py)-- To initialize vader sentiment analyser:
-
-![](img/vader_ini.png)
-
 ## Updating/customizing Lexicon list
 I have added some WSB "financial terms" into my customized lexicon list and it is important to pick up on their inside jokes and "slangs" -- e.g. 
 ``` python
@@ -211,11 +206,54 @@ wsbfinancial_jargon = {
     
 }
 ```
+
+## Initializing VADER sentiment Analyser
+I used the VADER (Valence Aware Dictionary for Sentiment Reasoning) model to analyze the sentiment of r/Wallstreetbets submission with my [customized lexicon](https://github.com/Bominkkwon/reddit-sentiment-and-stock-volatility/blob/main/sentiment/custom_lexicon.py)-- To initialize vader sentiment analyser:
+
+![](img/vader_ini.png)
+
+VADER's ```SIA = SentimentIntensityAnalyzer()``` takes in the comments and return a dictionary of scores in each of these four categories: 
+* negative (score)
+* neutral (score)
+* positive (score)
+* compound (score): this is the sum of positive, negative & neutral scores which is then normalized between -1(most extreme negative) and +1 (most extreme positive). **The more Compound score closer to +1, the higher the positivity of the text.** 
+
+
 ## Understanding each word's polarity score
 
 VADER sentimental analysis relies on a dictionary that maps lexical features to emotion intensities known as sentiment scores. The sentiment score of a text can be obtained by summing up the intensity of each word in the text. To find a single unidemnsional measure of sentiment for a given word, I measured each word's polarity score:
 
 ![](img/polarity_score.png)
 
+
   * Polarity classification
-    - This process will only focus on one thing: if the text expresses a positive, negative or neutral "opinion"
+    - This process will only focus on one thing: if the text expresses a positive, negative or neutral "opinion." (Here, neg — negative, neu — neutral, pos — positive.)
+
+## Adding (positive/negative) labels
+
+The compound score is usually used as a threshold value for the analysis of the text data. (Users can even leverage the flexibility of changing the compound score(threshold value) and "label" the text data. 
+![](img/sentiment_compound_to_label.png)
+
+Here, I followed the "standard scoring metric" and add its "label" to a new column "sent_label." From this output, we can conclude that the comments on $AMC from this particular post are neutral-positive skewed. (You could also remove the neutral words, and solely analyize with the remainder of the comments.)
+
+  <details>
+  <summary>Typical scoring metric used by most of the analyzers</summary>
+
+      1. Positive sentiment: compound score >= 0.05
+      2. Neutral sentiment: (compound score > -0.05) and (compound score < 0.05)
+      3. Negative sentiment: compound score <= -0.05
+
+  (Again, this is something that users can change depends on their projects and domain knowledge.)
+
+  </details>
+  
+
+## Visualizing sentiments of comments
+I generated visualizations(e.g. bar chart) to have a better understanding of our outputs. You can use its ```value_counts``` or convert it to %, and update the ylabel, accordingly. 
+
+![](img/sentiment_plot.png)
+
+
+
+
+
