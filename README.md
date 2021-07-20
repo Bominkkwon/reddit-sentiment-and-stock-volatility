@@ -10,6 +10,7 @@
 * [Methodology](#methodology)
 * [Results](#results)
 * [Summary](#summary)
+* [Future Work](#futurework)
 
 
 ## Project Title
@@ -274,3 +275,8 @@ The chart on the left shows the 'historical' stock data and the bar chart on the
 The width of the band can be an indicator of its volatility-- i.e. narrower bands indicate less volatility while wider ones indicate higher volatility. Our sentiment analysis shows that from the comments: 2839 words are considered 'neutral' (80.9%), 404 words are considered 'positive' (11.5%) and 263 words are considered 'negative'(7.5%); even though the comments are neutral-positive skewed, the percentage difference between the 'positive' values and the 'negative' values were not significant(about 4%) and it could indicate users had mixed feelings about the stock and may have resulted in higher volatility (this is without taking any other economic indicators or influences into consideration, merely "analyzing" this based on the subreddit sentiment of the collected comments.) During this specific period, the bands are wider, showing higher volatility and its volume moved from 199584500 to 126277200.
   
   
+## Summary
+  A visual comparison of Sentiment over time vs. BB buy indicator needs more indepth analysis to assess if and how predictive sentiment is on price. 
+  
+## Future Work
+  Such data from these social media platforms are easily manipulated by bots and sock puppet accounts; even the "hot", "new", "top" posts from this Subreddit can be manipulated by them-- it is bigger than just those orders or the price of a security getting manipulated, it could also manipulate those actual user's decision making process. It can be extremely hard to detect where bots are at work without advanced analysis tools. As detection tools get stronger, developers will look for ways around detection and as bots get more advanced, platforms will accelerate research and development to counterattack.
