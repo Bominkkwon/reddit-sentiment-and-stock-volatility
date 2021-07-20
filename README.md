@@ -88,7 +88,7 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
       ![](img/subreddit_hot.png)
         (Submission ID is an assigned "ID" for a specific post on Reddit)
   
-      In order to extract the comments from a subreddit post, you'll need to **create a submission objec**t and in this script-- we are looking for specific posts: the **top 30 "hot" popular posts in r/WallStreetBets, that was written by a Reddit user, and also mentions $AMC.** Subreddits can be filtered in many different ways; you can also choose to display your desired number of posts by changing ```(limit=30)``` that are ["new", "hot", "top", etc.](https://praw.readthedocs.io/en/latest/code_overview/models/subreddit.html)
+      In order to extract the comments from a subreddit post, you'll need to **create a submission object** and in this script-- we are looking for specific posts: the **top 30 "hot" popular posts in r/WallStreetBets, that was written by a Reddit user, and also mentions $AMC.** Subreddits can be filtered in many different ways; you can also choose to display your desired number of posts by changing ```(limit=30)``` that are ["new", "hot", "top", etc.](https://praw.readthedocs.io/en/latest/code_overview/models/subreddit.html)
   
       ## Define a submission object with submission ID 
       ![](img/post1.png)
@@ -153,6 +153,9 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
 ### 3. Technical Indicator
 
 * [Technical Indicator Analysis: Bollinger Bands®](https://github.com/Bominkkwon/reddit-sentiment-and-stock-volatility/blob/main/technical_indicator/technical_indicator__bollinger_band.ipynb)
+    <details>
+    <summary>The Basics of Bollinger Bands</summary>
+    A Bollinger Band® is a tool used in technical analysis. It is defined by a series of lines that are plotted two standard deviations—both positively and negatively—away from the simple moving average (SMA) of the price of a security. Bollinger Bands® identify a stock's high and low volatility points. While it can be a real challenge to forecast future prices and price cycles, volatility changes and cycles are relatively easy to identify. This is because equities alternate between periods of low volatility and high volatility—much like the **calm before the storm!** and the inevitable activity afterward. [read more about BB](https://www.schwab.com/resource-center/insights/content/bollinger-bandsr-what-they-are-and-how-to-use-them)
   
 ### 4. Reddit Sentiment Corpus
 
@@ -234,7 +237,7 @@ VADER sentimental analysis relies on a dictionary that maps lexical features to 
 The compound score is usually used as a threshold value for the analysis of the text data. (Users can even leverage the flexibility of changing the compound score(threshold value) and "label" the text data. 
 ![](img/sentiment_compound_to_label.png)
 
-Here, I followed the "standard scoring metric" and add its "label" to a new column "sent_label." From this output, we can conclude that the comments on $AMC from this particular post are neutral-positive skewed. (You could also remove the neutral words, and solely analyize with the remainder of the comments.)
+Here, I followed the "standard scoring metric" and add its "label" to a new column (df['sent_label']). From this output, we can conclude that the comments on $AMC from this particular post are neutral-positive skewed. (You could also remove the neutral words, and solely analyize with the remainder of the comments.)
 
   <details>
   <summary>Typical scoring metric used by most of the analyzers</summary>
@@ -254,6 +257,13 @@ I generated visualizations(e.g. bar chart) to have a better understanding of our
 ![](img/sentiment_plot.png)
 
 
+## Results
 
 
-
+  AMC Stock data (07/13/2021 - 07/20/2021)           |  Subreddit Sentiment (comments from 07/15/2021 - 07/16/2021, Submission ID = oldtp9)
+:-------------------------:|:-------------------------:
+![](img/amc_stock_data.png)  |  ![](img/subreddit_bar_chart.png)
+  
+The chart on the left shows the 'historical' stock data and the bar chart on the right is the visualization of sentiments of comments we generated for the post we picked, Submission ID = oldyp9. This particular post was generated on 07/15/2021 after the market was closed and reddit users commented on this post from when the post was created, 07/15/2021, to 07/16/2021 and our analysis shows that the comments on $AMC from this particular post are **neutral-positive skewed**. $AMC closed @$36.00 on 07/15/2021 and opened @37.83 on 07/16/2021 and closed @34.96	on 07/16/2021.
+  
+![](
