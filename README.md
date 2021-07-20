@@ -156,7 +156,7 @@ Sentiment analysis is the process of detecting positive or negative sentiment in
   
 ### 4. Reddit Sentiment Corpus
 
-## Updating/customizing Lexicon list
+#### > 4.1 Updating/customizing Lexicon list
 I have added some WSB "financial terms" into my customized lexicon list and it is important to pick up on their inside jokes and "slangs" -- e.g. 
 ``` python
 wsbfinancial_jargon = {
@@ -207,7 +207,7 @@ wsbfinancial_jargon = {
 }
 ```
 
-## Initializing VADER sentiment Analyser
+#### > 4.2 Initializing VADER sentiment Analyser
 I used the VADER (Valence Aware Dictionary for Sentiment Reasoning) model to analyze the sentiment of r/Wallstreetbets submission with my [customized lexicon](https://github.com/Bominkkwon/reddit-sentiment-and-stock-volatility/blob/main/sentiment/custom_lexicon.py)-- To initialize vader sentiment analyser:
 
 ![](img/vader_ini.png)
@@ -219,7 +219,7 @@ VADER's ```SIA = SentimentIntensityAnalyzer()``` takes in the comments and retur
 * compound (score): this is the sum of positive, negative & neutral scores which is then normalized between -1(most extreme negative) and +1 (most extreme positive). **The more Compound score closer to +1, the higher the positivity of the text.** 
 
 
-## Understanding each word's polarity score
+#### > 4.3 Understanding each word's polarity score
 
 VADER sentimental analysis relies on a dictionary that maps lexical features to emotion intensities known as sentiment scores. The sentiment score of a text can be obtained by summing up the intensity of each word in the text. To find a single unidemnsional measure of sentiment for a given word, I measured each word's polarity score:
 
@@ -229,7 +229,7 @@ VADER sentimental analysis relies on a dictionary that maps lexical features to 
   * Polarity classification
     - This process will only focus on one thing: if the text expresses a positive, negative or neutral "opinion." (Here, neg — negative, neu — neutral, pos — positive.)
 
-## Adding (positive/negative) labels
+#### > 4.4 Adding (positive/negative) labels
 
 The compound score is usually used as a threshold value for the analysis of the text data. (Users can even leverage the flexibility of changing the compound score(threshold value) and "label" the text data. 
 ![](img/sentiment_compound_to_label.png)
@@ -248,7 +248,7 @@ Here, I followed the "standard scoring metric" and add its "label" to a new colu
   </details>
   
 
-## Visualizing sentiments of comments
+#### > 4.5 Visualizing sentiments of comments
 I generated visualizations(e.g. bar chart) to have a better understanding of our outputs. You can use its ```value_counts``` or convert it to %, and update the ylabel, accordingly. 
 
 ![](img/sentiment_plot.png)
